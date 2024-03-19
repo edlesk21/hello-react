@@ -9,7 +9,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
           <div> 
-            <p> I hope this works!</p>
+            <p> I hope this works, lets go Spartans!</p>
           </div>
         </p>
         <a
@@ -18,7 +18,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React with E.J. and MSU!
+          Learn React with E.J. and Sparty!
         </a>
       </header>
     </div>
