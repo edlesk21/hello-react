@@ -1,6 +1,12 @@
 import logo from './spartan.svg';
 import './App.css';
 
+function MagicButton(){
+  return(
+    <button> Magic </button>
+  );
+}
+
 function App() {
   return (
     <div className="App">
@@ -21,6 +27,7 @@ function App() {
           Learn React with E.J. and Sparty!
         </a>
       </header>
+      <MagicButton />
     </div>
   );
 }
