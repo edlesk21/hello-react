@@ -3,7 +3,10 @@ import './App.css';
 
 function MagicButton(){
   return(
+    <div> 
+          <h3> This is a Magic Button</h3>
     <button>Magic</button>
+    </div>
   );
 }
 
