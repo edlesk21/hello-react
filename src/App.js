@@ -3,7 +3,7 @@ import './App.css';
 
 function MagicButton(){
   return(
-    <button> Magic </button>
+    <button>Magic</button>
   );
 }
 
@@ -26,8 +26,8 @@ function App() {
         >
           Learn React with E.J. and Sparty!
         </a>
+        <MagicButton />
       </header>
-      <MagicButton />
     </div>
   );
 }
