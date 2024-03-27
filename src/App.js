@@ -48,9 +48,9 @@ function PlayerButton(){
 };
 
 function Injury(){
-  <div>
-    <h3> Injured Players </h3>
-  </div>
+  return(
+    <h4> Injured Players are in Red:  </h4>
+  )
 };
 
 function App() {
