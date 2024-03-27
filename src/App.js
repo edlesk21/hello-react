@@ -1,77 +1,51 @@
 import logo from './spartan.svg';
 import './App.css';
 
-const magazines = [
-  { id: 1, title: 'Architectural Digest', theme: 'architecture', isAvailable: true },
-  { id: 2, title: 'Dwell', theme: 'architecture', isAvailable: true },
-  { id: 3, title: 'Communication Arts', theme: 'design', isAvailable: false },
+const players = [
+  { id: 1, name: 'Stephen Curry', team: 'Warriors', isAvailable: true },
+  { id: 2, name: 'Lebron James', team: 'Lakers', isAvailable: true },
+  { id: 3, name: 'Jayson Tatum', team: 'Celtics', isAvailable: true },
+  { id: 4, name: 'Joel Embiid', team: '76ers', isAvailable: false},
+  { id: 5, name: 'James Harden', team: 'Clippers', isAvailable: false },
+  { id: 6, name: 'Damien Lillard', team: 'Celtics ', isAvailable: false },
 ];
 
-function ZineRack() {
-  const listZines = magazines.map(zine =>
+function NBAplay() {
+  const listPlays = players.map(play =>
     <li
-      key={zine.id}
+      key={play.id}
       style={{
-        color: zine.isAvailable ? 'green' : 'red'
+        color: play.isAvailable ? 'green' : 'red'
       }}
     >
-      {zine.title}
+      <span>{play.name}</span> - <span>{play.team}</span>
+
     </li>
   );
   return (
-    <ul>{listZines}</ul>
+    <ul>{listPlays}</ul>
   )
 }
 
-const book = {
-  title: 'A Farewell to Arms',
-  author: 'Earnest Hemingway',
-  published: '1929',
-  image: 'https://upload.wikimedia.org/wikipedia/en/4/48/Hemingway_farewell.png',
-  width: '264',
-  height: '378'
-};
-
-function Bookshelf() {
-  return (
-    <div>
-      {/* Components can't return multiple JSX tags unless they are wrapped in a parent element */}
-      {/* This is a JSX comment */}
-      <h2>{book.title} ({book.published})</h2>
-      <p>{book.author}</p>
-      {/* This a conditional that checks if an image exists before displaying it */}
-      <img
-        className="bookCover"
-        src={book.image}
-        alt={book.title + ' cover'}
-        style={{
-          width: book.width,
-          height: book.height
-        }}
-      />
-    </div>
-  );
-}
-
-function MagicButton(){
+function PlayerButton(){
   return(
     <div> 
-          <h3> This is a Magic Button</h3>
-    <button>Magic</button>
+      <h2> Want to see what NBA players are plating tonight? </h2>
+      <h3> Push the button below to see! </h3>
+      <button> Push to see </button>
     </div>
-  );
-}
+  )
+};
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ZineRack />
-        <Bookshelf />
-        <MagicButton />
+        <PlayerButton />
+        <NBAplay />
       </header>
     </div>
   );
-}
+};
 
 export default App;
