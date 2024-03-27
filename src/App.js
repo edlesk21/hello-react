@@ -7,7 +7,7 @@ const players = [
   { id: 3, name: 'Jayson Tatum', team: 'Celtics', isAvailable: true },
   { id: 4, name: 'Joel Embiid', team: '76ers', isAvailable: false},
   { id: 5, name: 'James Harden', team: 'Clippers', isAvailable: false },
-  { id: 6, name: 'Damien Lillard', team: 'Celtics ', isAvailable: false },
+  { id: 6, name: 'Damien Lillard', team: 'Bucks ', isAvailable: false },
 ];
 
 function NBAplay() {
@@ -27,14 +27,30 @@ function NBAplay() {
   )
 }
 
+function NBAgames() {
+  return(
+    <>
+    <h2> Games Tonight: </h2>
+      <li> Warriors vs. Celtics</li>
+      <li> Lakers vs. 76ers </li>
+      <li> Clippers vs. Bucks </li>
+    </>
+  )
+  }; 
 function PlayerButton(){
   return(
     <div> 
-      <h2> Want to see what NBA players are plating tonight? </h2>
+      <h2> Want to see what NBA players are playing tonight? </h2>
       <h3> Push the button below to see! </h3>
       <button> Push to see </button>
     </div>
   )
+};
+
+function Injury(){
+  <div>
+    <h3> Injured Players </h3>
+  </div>
 };
 
 function App() {
@@ -42,7 +58,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <PlayerButton />
+        <Injury />
         <NBAplay />
+        <NBAgames />
       </header>
     </div>
   );
